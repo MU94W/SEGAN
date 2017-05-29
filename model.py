@@ -69,7 +69,7 @@ class SEGAN(Model):
         if get_score:
             enhenced_signal_eval, fake_score_eval = \
                     sess.run([self.enhenced_signal, self.fake_score], feed_dict)
-            return enhenced_signal_eval, fake_d_loss_eval
+            return enhenced_signal_eval, fake_score_eval
         else:
             enhenced_signal_eval = sess.run(self.enhenced_signal, feed_dict)
             return enhenced_signal_eval
